@@ -14,6 +14,7 @@
 - OS
 - Data Base
 - FrameWork
+- Language
 
 ### 정기 일정
 *****************
