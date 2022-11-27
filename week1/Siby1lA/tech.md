@@ -1,0 +1,130 @@
+# 🛠️ 프로젝트에서 자주 사용했던 기술
+
+<!-- # 상태 관리란?
+
+<img width="940" alt="Screen Shot 2022-11-27 at 9 43 21 AM" src="https://user-images.githubusercontent.com/77488652/204114220-0400e50d-b54c-40c7-a83a-e0130a4e4c21.png">
+리액트의 데이터 흐름은 단반향이기에 선언한 `state`를 하위 컴포넌트에서도 사용하려면 props로 넘겨줘서 사용하는 방식을 갖고 있다.
+
+![Screen Recording 2022-11-27 at 9 40 07 AM](https://user-images.githubusercontent.com/77488652/204114187-3b0d15bd-d6e6-427e-85b9-3a3bc0a120a9.gif)
+하지만 컴포넌트가 너무 많아지면 state를 전해주기 위해 props를 너무 많이 사용하게 되는데 이렇게 되면 상태를 관리하는데 까다롭게 된다.
+그래서 상태를 효율적으로 관리하기 위해 상태 관리 라이브러리를 사용한다.
+
+<img width="715" alt="Screen Shot 2022-11-27 at 10 10 10 AM" src="https://user-images.githubusercontent.com/77488652/204114799-97ab437c-e190-4aa9-98c3-ee005cf6aec6.png">
+
+상태 관리 라이브러리를 사용하면 `state` 보관함을 따로 만들어서 모든 컴포넌트가 냉장고처럼 자유롭게 꺼내 쓸 수 있어 상태 관리에 용이하다.
+
+## 간단 정리 :
+
+- 컴포넌트들의 상태 관련 로직들을 다른 파일로 분리해 효율적으로 관리
+- 글로벌 상태 관리 -->
+
+# 1. 상태 관리 라이브러리
+
+## 1. redux
+
+자바스크립트 상태 관리 라이브러리
+
+### 사용 이유 :
+
+자바스크립트 상태 관리 라이브러리인 만큼 한번 배워두면 react가 아니여도 vue, angular와 같은 프레임워크에서도 redux를 사용할 수 있다.
+
+> \* 리액트는 프레임워크가 아닌 라이브러리
+
+하지만 redux를 사용하는 제일 큰 이유는 리덕스의 사용자가 다른 상태 관리 라이브러리와 비교해서 너무 많기 때문이다.
+
+### 현재 추세 :
+
+<div align=center>npm trends</div>
+<img width="1317" alt="Screen Shot 2022-11-27 at 10 21 15 AM" src="https://user-images.githubusercontent.com/77488652/204115069-a2f24585-6e14-4b56-9bc1-cda80f03e92d.png">
+
+리덕스가 압도적으로 다운로드 양이 많다. 그만큼 많은 프로젝트에 사용되는 만큼 필수적으로 알아야 한다고 생각한다.
+
+### 1-1. redux-thunk
+
+redux의 비동기 작업을 하기 위해 필요한 redux 미들웨어 중 하나이다.
+
+redux는 기본적으로 액션 객체만 디스패치 가능한 반면에 `redux-thunk`는 위의 예제처럼 비동기 함수의 액션을 디스패치 할 수 있다. (비동기 호출이니 만큼 api 호출에 많이 쓰인다.)
+
+#### redux-thunk 미들웨어 동작 로직 :
+
+![ReduxAsyncDataFlowDiagram-d97ff38a0f4da0f327163170ccc13e80](https://user-images.githubusercontent.com/77488652/204117709-bc2f5536-85cc-4ded-9ca0-3ce96a1ca5de.gif)
+
+1. API 함수 대기
+2. API 함수 호출 (디스패치)
+3. API 함수 값 리턴
+4. 리턴 값 디스패치
+5. 리듀서에서 상태 업데이트
+
+## 3. recoil
+
+redux는 자바스크립트 상태 관리 라이브러리인 반면
+`recoil`은 react 전용 상태 관리 라이브러리이다.
+
+### 사용 이유
+
+1. react는 페이스북이 만들었고 recoil도 페이스북이 만들었기에 react hook의 스타일을 가지고 있어 친근하다.
+2. 구조가 복잡한 redux와 다르게 `recoil`은 구조가 간단하다.
+3. 내장된 `selector`로 인해 미들웨어의 사용 없이 비동기 로직 사용을 간단히 할 수 있어 비동기 처리 라이브러리에 의존할 필요가 없다.
+
+즉 리액트의 문법과 유사하고 그 구조가 단순해 사용하기 쉬워 사용한다.
+
+### 추세
+
+비교적 최근에 만들어진 라이브러리이며 사용자가 많은 redux와 달리 매우 단순한 구조로 러닝커브가 낮다.
+그리고 리액트 전용 라이브러리라 리액트 사용자들도 자주 사용하는 추세다.
+
+# 2. CSS 라이브러리
+
+## 1. styled-components
+
+### 사용 이유 :
+
+CSS in JS, 즉 JS안에 CSS를 작성하는 기법.
+컴포넌트 파일 안에 HTML, CSS, JS 모두 담을 수 있어 파일별로 관리하기 용이하다.
+
+1. 컴포넌트의 props를 참조할 수 있어 props에 값에 따라 스타일을 다르게 코딩할 수 있다.
+
+2. 페이지에서 렌더링되는 요소에 맞춰 자동으로 해당 스타일만 삽입한다. 즉 그때그때 필요한 스타일만 로드하는 것이다.
+
+3. styled-component는 스스로 className을 생성하기 때문에 className의 중복이나 오타로 인한 버그를 줄여준다.
+
+CSS in JS 기법을 사용하는 CSS 라이브러리는 emotion, styled-jsx 등 여러 종류가 있는데 특히 styled-components를 사용한 이유는 다른 라이브러리보다 먼저 접했고 팀 프로젝트를 진행하면서 많이 사용해 봤기에 익숙해져서 자주 사용하게 되었다.
+
+### 현재 추세 :
+
+<img width="1331" alt="Screen Shot 2022-11-27 at 1 35 31 PM" src="https://user-images.githubusercontent.com/77488652/204119397-37f1d267-6cd4-4f44-aa70-5d9713e427e4.png">
+
+현존하는 CSS in JS 관련 리액트 라이브러리 중에서 가장 인기 있는 라이브러리이다.
+하지만 emotion, styled-jsx와의 차이가 크지 않아 익숙한 것을 사용하거나 협업 시 사용하게 되는 라이브러리를 사용하면 될 것 같다.
+
+## 2. framer-motion
+
+### 사용 이유
+
+css 애니메이션을 쉽게 사용하는 라이브러리이다.
+해당 사이트에서 애니메이션을 미리 볼 수 있고 그 코드들을 제공하기에 가져다 쓰면 된다.
+
+css 애니메이션 관련 라이브러리는 꽤 있는데 그중에서 가장 인기 있는 라이브러리여서 사용하게 되었다.
+
+1. 다양한 애니메이션 제공
+2. 단순한 키프레임 문법
+3. 레이아웃 애니메이션
+4. exit 애니메이션
+5. ..그외 애니메이션 관련 기능들
+
+### 현재 추세
+
+<img width="1312" alt="Screen Shot 2022-11-27 at 1 53 06 PM" src="https://user-images.githubusercontent.com/77488652/204119831-c8b0fce7-74cd-44f2-8d8f-1c721b2f7bb1.png">
+
+내가 알고 있는 css 라이브러리 중에서 가장 사용량이 많다.
+다른 라이브러리보다 압도적으로 기능이 많아서 많이 사용하는 추세인 것 같다.
+
+# 3. 파이어베이스
+
+- firebase Auth
+- firebase Database
+- firebase Storage
+
+# 4.그 외
+
+- react-hook-form
