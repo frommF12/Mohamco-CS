@@ -28,17 +28,17 @@
 ## GET과 POST의 차이점
 
 1. <span style="background-color: #ffd33d">**사용용도**</span>
-    - `GET`은 사용자에게 필요한 데이터를 받아오는 역할을 하고, `POST`는 사용자의 어떤 행동을 서버에 반영하는 역할을 한다.
-    - DB로 예시를 들면,`GET`</span>은 SELECT에 가깝고,`POST`는 CREATE에 가깝다고 볼 수 있다.
+   - `GET`은 사용자에게 필요한 데이터를 받아오는 역할을 하고, `POST`는 사용자의 어떤 행동을 서버에 반영하는 역할을 한다.
+   - DB로 예시를 들면,`GET`</span>은 SELECT에 가깝고,`POST`는 CREATE에 가깝다고 볼 수 있다.
 2. <span style="background-color: #ffd33d">**캐싱**</span>
-    - `GET`의 파라미터들은 URL의 일부분이기 때문에 브라우저 히스토리에 남게되고, `POST`는 브라우저에 기록이 남지 않는다.
-    - `GET`은 URL로 인코딩되어 즐겨찾기가 가능하고, `POST`는 즐겨찾기가 불가능하다.
+   - `GET`의 파라미터들은 URL의 일부분이기 때문에 브라우저 히스토리에 남게되고, `POST`는 브라우저에 기록이 남지 않는다.
+   - `GET`은 URL로 인코딩되어 즐겨찾기가 가능하고, `POST`는 즐겨찾기가 불가능하다.
 3. <span style="background-color: #ffd33d">**보안**</span>
-    - `GET`은 URL을 통해 모든 파라미터를 전달하기 때문에 주소창에 전달 값이 노출되어 보안상 취약하고, `POST`는 데이터가 노출되지 않기 때문에 보안이 필요한 경우에 용이하다.
+   - `GET`은 URL을 통해 모든 파라미터를 전달하기 때문에 주소창에 전달 값이 노출되어 보안상 취약하고, `POST`는 데이터가 노출되지 않기 때문에 보안이 필요한 경우에 용이하다.
 4. <span style="background-color: #ffd33d">**데이터양**</span>
-    - `GET`은 URL 길이가 제한이 있어 전송 데이터양이 한정되어 있고, `POST`는 전송 데이터양 제한이 없다.
-5.  <span style="background-color: #ffd33d">**보안**</span>
-    - `GET`은 URL 길이가 제한이 있어 전송 데이터양이 한정되어 있고, `POST`는 전송 데이터양 제한이 없다.
+   - `GET`은 URL 길이가 제한이 있어 전송 데이터양이 한정되어 있고, `POST`는 전송 데이터양 제한이 없다.
+5. <span style="background-color: #ffd33d">**보안**</span>
+   - `GET`은 URL 길이가 제한이 있어 전송 데이터양이 한정되어 있고, `POST`는 전송 데이터양 제한이 없다.
 
 <br>
 
@@ -47,5 +47,3 @@
 `GET`과 `POST`는 둘 다 HTTP 프로토콜을 이용해 서버에 무언가 `request`할 때 사용하는 방식이지만, 사용하는 상황이 다르다는 것을 알 수 있다. 즉, <span style="background: #f1f8ff">가져올 때와 수행할 때를 파악해서 적합한 곳에 활용해야 한다. </span>
 
 <br>
-
-
