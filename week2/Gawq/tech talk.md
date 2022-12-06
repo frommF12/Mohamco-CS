@@ -113,3 +113,14 @@ InputStreamReader란 문자 입력 스트림의 한 종류로 입력 장치(키�
 ---
 
 많은 양을 받아들일 때는 버퍼를 사용해 속도가 빠른 BufferedReader를 사용하는 것이 좋지만, 그렇지 않을 경우 Scanner를 사용하는 것이 활용적이라고 볼 수 있다.
+
+
+참고사이트
+
+---
+
+[https://friends-aihaja.tistory.com/entry/1-BufferReader-VS-Scanner-차이점](https://friends-aihaja.tistory.com/entry/1-BufferReader-VS-Scanner-%EC%B0%A8%EC%9D%B4%EC%A0%90)
+
+[https://dlee0129.tistory.com/238](https://dlee0129.tistory.com/238)
+
+[https://lasbe.tistory.com/48](https://lasbe.tistory.com/48)
