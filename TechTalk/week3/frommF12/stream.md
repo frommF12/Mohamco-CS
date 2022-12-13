@@ -65,7 +65,7 @@ Arrays.stream(testArray)
 
 위의 특징에서 볼 수 있듯이 중간 연산은 스트림을 반환하고 최종 연산이 결과를 반환한다 
 
-![이미지](/stream.png)
+![이미지](stream.png)
 
 위의 코드 동작은 filter → mapToInt → reduce 순이다
 
