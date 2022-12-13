@@ -1,4 +1,6 @@
-# IIFE (Immediately-Invoked Function Expression)
+# ![](https://velog.velcdn.com/images/psb7391/post/4cff3168-b3ab-407b-ae0c-2ad56ddd2de9/image.png)
+
+(Immediately-Invoked Function Expression)
 
 IIFE는 직역하면 즉시-실행 함수 표현식이다.
 
@@ -64,3 +66,15 @@ console.log(getCount()); // 3
 ```
 
 IIFE안의 익명함수는 클로저가 되고 변수 count 는 private 데이터가 되므로 밖에 보여지지 않는다. 흔히 말하는 모듈 패턴이 바로 이 방식에 의존한다.
+
+```
+(function write() {
+  var txt = "Test";
+  document.write(txt);
+})();
+
+write(); // ReferenceError: write is not defined.
+console.log(txt); // ReferenceError: txt is not defined.
+```
+
+자바스크립트의 클로저 때문에 IIFE안에 사용된 변수, 함수들은 모두 블럭 바깥에 영향을 줄 수 없는 것을 확인할 수 있다.
