@@ -42,3 +42,5 @@
 [8주차](https://github.com/seonghoo1217/Mohamco-CS/blob/main/QnA/QnA_8week.md)
 
 [9주차](https://github.com/seonghoo1217/Mohamco-CS/blob/main/QnA/QnA_9week.md)
+
+[14주차](https://github.com/seonghoo1217/Mohamco-CS/blob/main/TechTalk/week14.md)
