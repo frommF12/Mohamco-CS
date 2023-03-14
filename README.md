@@ -1,6 +1,6 @@
 # ✍ Mohamco-CS
 *****************
-스터디 모임 모함코의 CS 공부 레포지토리
+**가치있는 지식의 공유와 함께 성장하는 모함코**
 
 ##  스터디원 구성
 | 이성호| 박수빈| 김보민| 임시은| 김지현| 신태우| 최낙주                                                                                                   |
@@ -42,3 +42,5 @@
 [8주차](https://github.com/seonghoo1217/Mohamco-CS/blob/main/QnA/QnA_8week.md)
 
 [9주차](https://github.com/seonghoo1217/Mohamco-CS/blob/main/QnA/QnA_9week.md)
+
+[14주차](https://github.com/seonghoo1217/Mohamco-CS/blob/main/TechTalk/week14.md)
